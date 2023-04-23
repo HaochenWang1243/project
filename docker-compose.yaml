@@ -1,0 +1,21 @@
+# docker-compose is used for configuring and starting containers of services
+# the services will be in the same network named $USER_default
+services:
+  pgdatabase:
+    volumes:
+      - /home/haw057/project/docker-postgres-volume:/var/lib/postgresql/data:rw
+    environment:
+      - POSTGRES_USER=root 
+      - POSTGRES_PASSWORD=root 
+      - POSTGRES_DB=ny_taxi
+    ports:
+      - 5433:5432
+    image: postgres:14
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - 5050:80
+    environment:
+      - "PGADMIN_DEFAULT_EMAIL=haw057@ucsd.edu" 
+      - "PGADMIN_DEFAULT_PASSWORD=root"

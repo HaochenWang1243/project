@@ -1,0 +1,5 @@
+gcp_auth_keys/
+docker-postgres-volume/
+yellow_tripdata_2023-01.csv
+yellow_tripdata_2023-01.parquet
+terraform_real/.terraform/
