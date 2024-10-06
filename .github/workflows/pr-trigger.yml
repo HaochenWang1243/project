@@ -1,0 +1,18 @@
+name: Pull Request Workflow
+
+# Trigger the workflow on pull request events
+on:
+  pull_request:
+    branches:
+      - main  # Replace with the target branch where you want to merge PRs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run a simple command
+        run: echo "Pull request workflow triggered!"
