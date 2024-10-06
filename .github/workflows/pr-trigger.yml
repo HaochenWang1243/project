@@ -5,6 +5,7 @@ on:
   pull_request:
     branches:
       - main  # Replace with the target branch where you want to merge PRs
+  workflow_dispatch:
 
 jobs:
   build:
